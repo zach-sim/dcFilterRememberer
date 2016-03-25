@@ -1,0 +1,23 @@
+{
+  "name": "dcFilterRememberer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dcFilterRememberer.js",
+  "jsnext:main": "src/main.js",
+  "repository": "github:umbra268/dcFilterRememberer",
+  "scripts": {
+    "prebuild": "rm -rf build && mkdir build",
+    "build": "rollup -c",
+    "postbuild": "cp build/dcFilterRememberer.js dcFilterRememberer.js && uglifyjs dcFilterRememberer.js -c -o dcFilterRememberer.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Zach Sim",
+    "url": "https://github.com/umbra268"
+  },
+  "devDependencies": {
+    "rollup": "^0.25.6",
+    "rollup-plugin-json": "^2.0.0",
+    "uglify-js": "^2.6.2"
+  }
+}
